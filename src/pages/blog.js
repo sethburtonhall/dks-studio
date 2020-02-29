@@ -28,7 +28,7 @@ const Blog = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{post.date}</small>
+              {/* <small>{post.date}</small> */}
               {/* <p
                 dangerouslySetInnerHTML={{
                   __html: post.frontmatter.description || post.excerpt,
@@ -54,7 +54,6 @@ export const pageQuery = graphql`
     posts: allDatoCmsBlog {
       nodes {
         id
-        date
         title
         slug
         body
