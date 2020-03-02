@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 // Styles
-import { Container } from "../styles/GlobalStyles"
+import { StyledTestimonials } from "../styles/StyledTestimonials"
 
 const Testimonials = () => {
   return (
@@ -11,18 +11,19 @@ const Testimonials = () => {
       render={data => {
         const { testimonials } = data.testimonial
         return (
-          <Container>
+          <StyledTestimonials>
             <ul>
               {testimonials.map(testimonial => (
                 <div className="testimonial" key={testimonial.id}>
                   <p>{testimonial.quote}</p>
                   <p>
-                    {testimonial.name} - {testimonial.title} - {testimonial.company}
+                    {testimonial.name} - {testimonial.title} -{" "}
+                    {testimonial.company}
                   </p>
                 </div>
               ))}
             </ul>
-          </Container>
+          </StyledTestimonials>
         )
       }}
     />

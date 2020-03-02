@@ -9,6 +9,7 @@ Wordpress2016.overrideThemeStyles = () => {
     },
     body: {
       color: `${theme.black}`,
+      fontSize: `18px`,
     },
   }
 }
