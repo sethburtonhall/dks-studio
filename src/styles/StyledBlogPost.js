@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { device } from "./MediaQueries"
-import { theme } from "./theme"
+import { theme } from "./Theme"
 // import { rhythm } from "../utils/typography"
 
 export const StyledBlogPost = styled.div`
