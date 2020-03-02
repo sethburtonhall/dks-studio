@@ -1,5 +1,5 @@
 const path = require(`path`)
-// const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Create Blog Post & Portfolio Pages
 exports.createPages = ({ graphql, actions }) => {
@@ -10,7 +10,9 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        blogs: allDatoCmsBlog {
+        blogs: allDatoCmsBlog(
+          sort: { fields: [meta___createdAt], order: DESC }
+        ) {
           edges {
             node {
               title
@@ -18,7 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        portfolios: allDatoCmsPortfolio {
+        portfolios: allDatoCmsPortfolio(sort: { fields: [title], order: ASC }) {
           edges {
             node {
               slug
@@ -74,15 +76,15 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
-}
+//   if (node.internal.type === `MarkdownRemark`) {
+//     const value = createFilePath({ node, getNode })
+//     createNodeField({
+//       name: `slug`,
+//       node,
+//       value,
+//     })
+//   }
+// }

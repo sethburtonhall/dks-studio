@@ -21,10 +21,19 @@ const Nav = ({ location }) => {
   //     </Link>
   //   )
   // }
+  var styles = {
+    bmMenuWrap: {
+      transitionDuration: ".3s",
+    }
+  }
 
   return (
     <StyledNav>
-      <Menu right noOverlay disableAutoFocus>
+      <Menu
+        styles={styles}
+        right
+        noOverlay 
+        disableAutoFocus>
         {/* {home} */}
         <Link id="home" to="/" className="menu-item">
           Home

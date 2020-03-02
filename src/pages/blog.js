@@ -1,11 +1,15 @@
 import React from "react"
+
+// Gatsby
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 // Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { rhythm } from "../utils/typography"
+// Styles
+import { StyledBlogCard } from "../styles/StyledBlogCard"
 
 const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -14,30 +18,27 @@ const Blog = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <div style={{ margin: "20px 0 40px" }}>
+      <StyledBlogCard>
         {posts.map(post => {
           const title = post.title || post.slug
           return (
-            <div key={post.id} className="blog-post">
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={`blog/${post.slug}`}>
-                  {title}
-                </Link>
-              </h3>
-              {/* <small>{post.date}</small> */}
-              {/* <p
-                dangerouslySetInnerHTML={{
-                  __html: post.frontmatter.description || post.excerpt,
-                }}
-              /> */}
+            <div key={post.id} className="post-card">
+              <Link to={`blog/${post.slug}`}>
+                <Img
+                  className="featured-image"
+                  fluid={post.image.fluid}
+                  durationFadeIn={1000}
+                  alt={`${post.title} Portfolio Cover`}
+                />
+                <div className="post-info">
+                  <h5 className="post-title">{title}</h5>
+                </div>
+              </Link>
+              <small>{post.date}</small>
             </div>
           )
         })}
-      </div>
+      </StyledBlogCard>
     </Layout>
   )
 }
@@ -45,18 +46,31 @@ const Blog = ({ data, location }) => {
 export default Blog
 
 export const pageQuery = graphql`
-  query {
+  query PageQuery {
     site {
       siteMetadata {
         title
       }
     }
-    posts: allDatoCmsBlog {
+    posts: allDatoCmsBlog(sort: { fields: [meta___createdAt], order: DESC }) {
       nodes {
         id
         title
         slug
-        body
+        image: featuredImage {
+          fluid(
+            imgixParams: {
+              fm: "jpg"
+              auto: "compress"
+              w: "900"
+              h: "500"
+              fit: "facearea"
+              facepad: 1.5
+            }
+          ) {
+            ...GatsbyDatoCmsFluid
+          }
+        }
       }
     }
   }

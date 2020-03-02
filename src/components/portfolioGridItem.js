@@ -18,14 +18,19 @@ const PortfolioGridItem = () => {
           <>
             {portfolioItems.map(portfolioItem => (
               <StyledPortfolioGridItem key={portfolioItem.id}>
-                <Link to={`/portfolio/${portfolioItem.slug}`}>
-                  <Img
-                    fluid={portfolioItem.image.fluid}
-                    durationFadeIn={1000}
-                    alt={`${portfolioItem.title} Portfolio Cover`}
-                  />
-                  <h4 className="portfolio-cat">{portfolioItem.title}</h4>
-                </Link>
+                <div class=" overlay-image">
+                  <Link to={`/portfolio/${portfolioItem.slug}`}>
+                    <Img
+                      className="image"
+                      fluid={portfolioItem.image.fluid}
+                      durationFadeIn={1000}
+                      alt={`${portfolioItem.title} Portfolio Cover`}
+                    />
+                    <div class=" hover">
+                      <div class=" text">{portfolioItem.title}</div>
+                    </div>
+                  </Link>
+                </div>
               </StyledPortfolioGridItem>
             ))}
           </>
@@ -37,7 +42,7 @@ const PortfolioGridItem = () => {
 
 const portfolioCover = graphql`
   query PortfolioCover {
-    portfolioItems: allDatoCmsPortfolio {
+    portfolioItems: allDatoCmsPortfolio(sort: { fields: [title], order: ASC }) {
       nodes {
         id
         slug

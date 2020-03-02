@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 // Styles
-import { Container } from "../styles/GlobalStyles"
+import { StyledClients } from "../styles/StyledClients"
 
 const ClientList = () => {
   return (
@@ -11,13 +11,13 @@ const ClientList = () => {
       render={data => {
         const { clients } = data.client
         return (
-          <Container>
+          <StyledClients>
             <ul>
               {clients.map(client => (
                 <li key={client.id}>{client.name}</li>
               ))}
             </ul>
-          </Container>
+          </StyledClients>
         )
       }}
     />

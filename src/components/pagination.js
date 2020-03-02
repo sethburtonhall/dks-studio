@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 import { Link } from "gatsby"
 
 const Pagination = ({ previous, next, type }) => (
@@ -14,14 +14,14 @@ const Pagination = ({ previous, next, type }) => (
     <li>
       {previous && (
         <Link to={`${type}/${previous.slug}`} rel="prev">
-          ← {previous.title}
+          ← Previous
         </Link>
       )}
     </li>
     <li>
       {next && (
         <Link to={`${type}/${next.slug}`} rel="next">
-          {next.title} →
+          Next →
         </Link>
       )}
     </li>

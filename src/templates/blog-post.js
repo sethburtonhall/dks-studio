@@ -1,39 +1,44 @@
 import React from "react"
+
+// Gatsby
 import { graphql } from "gatsby"
-// import { MDXRenderer } from "gatsby-plugin-mdx"
+import Img from "gatsby-image"
 
 // Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pagination from "../components/pagination"
 
-import { rhythm, scale } from "../utils/typography"
+// Styles
+import { StyledBlogPost } from "../styles/StyledBlogPost"
+// import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, location, pageContext }) => {
   const post = data.blogPost
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-
+  
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={post.title} />
-      <h1>{post.title}</h1>
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
-        }}
-      >
-        {/* {post.date} */}
-      </p>
-      {post.body}
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
+      <StyledBlogPost>
+        <Img
+          className="full-width"
+          fluid={post.image.fluid}
+          duration={1000}
+          alt="Featured Image"
+        />
+        <h1 className="post-title">{post.title}</h1>
+        <p>{/* {post.date} */}</p>
+        <div className="post-body">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: post.bodyNode.childMarkdownRemark.html,
+            }}
+          />
+        </div>
+        <hr />
+      </StyledBlogPost>
       <Pagination previous={previous} next={next} type="blog" />
     </Layout>
   )
@@ -52,7 +57,24 @@ export const pageQuery = graphql`
     blogPost: datoCmsBlog(slug: { eq: $slug }) {
       id
       title
-      body
+      bodyNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      image: featuredImage {
+        fluid(
+          imgixParams: {
+            fm: "jpg"
+            auto: "compress"
+            w: "1500"
+            h: "500"
+            fit: "crop"
+          }
+        ) {
+          ...GatsbyDatoCmsFluid
+        }
+      }
     }
   }
 `
