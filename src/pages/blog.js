@@ -32,9 +32,9 @@ const Blog = ({ data, location }) => {
                 />
                 <div className="post-info">
                   <h5 className="post-title">{title}</h5>
+                  <small className="post-date">{post.date}</small>
                 </div>
               </Link>
-              <small>{post.date}</small>
             </div>
           )
         })}
@@ -55,6 +55,7 @@ export const pageQuery = graphql`
     posts: allDatoCmsBlog(sort: { fields: [meta___createdAt], order: DESC }) {
       nodes {
         id
+        date(formatString: "MMMM Do, YYYY")
         title
         slug
         image: featuredImage {

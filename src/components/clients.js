@@ -12,11 +12,29 @@ const ClientList = () => {
         const { clients } = data.client
         return (
           <StyledClients>
-            <ul>
-              {clients.map(client => (
-                <li key={client.id}>{client.name}</li>
-              ))}
-            </ul>
+            <h1>Clients</h1>
+            <div className="clients">
+              <ul>
+                {clients.slice(0, 10).map(client => (
+                  <li key={client.id}>{client.name}</li>
+                ))}
+              </ul>
+              <ul>
+                {clients.slice(11, 22).map(client => (
+                  <li key={client.id}>{client.name}</li>
+                ))}
+              </ul>
+              <ul>
+                {clients.slice(23, 34).map(client => (
+                  <li key={client.id}>{client.name}</li>
+                ))}
+              </ul>
+              <ul>
+                {clients.slice(35, 46).map(client => (
+                  <li key={client.id}>{client.name}</li>
+                ))}
+              </ul>
+            </div>
           </StyledClients>
         )
       }}

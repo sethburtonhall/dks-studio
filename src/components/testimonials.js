@@ -12,17 +12,23 @@ const Testimonials = () => {
         const { testimonials } = data.testimonial
         return (
           <StyledTestimonials>
-            <ul>
-              {testimonials.map(testimonial => (
-                <div className="testimonial" key={testimonial.id}>
-                  <p>{testimonial.quote}</p>
-                  <p>
-                    {testimonial.name} - {testimonial.title} -{" "}
-                    {testimonial.company}
-                  </p>
-                </div>
-              ))}
-            </ul>
+            {testimonials.map(testimonial => (
+              <div className="testimonial" key={testimonial.id}>
+                <span className="icon left-icon">
+                  <i class="fas fa-quote-left"></i>
+                </span>
+                <p className="quote">
+                  <span className="icon right-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </span>
+                  {testimonial.quote}
+                </p>
+                <p className="citation">
+                  <span className="name">{testimonial.name}</span> -{" "}
+                  {testimonial.title} - <span className="company">{testimonial.company}</span>
+                </p>
+              </div>
+            ))}
           </StyledTestimonials>
         )
       }}

@@ -5826,10 +5826,10 @@ gatsby-remark-images-datocms@^0.0.9:
     query-string "^6.4.2"
     unist-util-select "^2.0.0"
 
-gatsby-source-datocms@^2.1.26:
-  version "2.1.26"
-  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.1.26.tgz#05237fb5b906743db0422274da37eff84ff4e3de"
-  integrity sha512-XKgoWqEBjMzBC8zp5Z+89E3BzGmE+pB8xNrmJMpqGhyQg25+R5UO4t95oAhqcbRcuIobSm+w13GNxUM4iNIMjA==
+gatsby-source-datocms@^2.1.27:
+  version "2.1.27"
+  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.1.27.tgz#c2e52637af7e109dd58ee8931323b875ff6b3554"
+  integrity sha512-3f+gQhdF8ODhfrMcQdiC4ojQS9HRIebOKkaWy7QUUtbpry0rPDzS49afcmoTsxpPpi6X49x7cQjq5V3IWHlg4Q==
   dependencies:
     core-js "^3.2.1"
     datocms-client "~3.0.10"
@@ -9850,6 +9850,13 @@ pnp-webpack-plugin@^1.5.0:
   integrity sha512-jd9olUr9D7do+RN8Wspzhpxhgp1n6Vd0NtQ4SFkmIACZoEL1nkyAdW9Ygrinjec0vgDcWjscFQQ1gDW8rsfKTg==
   dependencies:
     ts-pnp "^1.1.2"
+
+polished@^3.4.4:
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-3.4.4.tgz#ac8cd6e704887398f3b802718f9d389b9ea4307b"
+  integrity sha512-x9PKeExyI9AhWrJP3Q57I1k7GInujjiVBJMPFmycj9hX1yCOo/X9eu9eZwxgOziiXge3WbFQ5XOmkzunOntBSA==
+  dependencies:
+    "@babel/runtime" "^7.6.3"
 
 portfinder@^1.0.25:
   version "1.0.25"

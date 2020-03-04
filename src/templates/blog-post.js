@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
   const post = data.blogPost
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={post.title} />
@@ -29,7 +29,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
           alt="Featured Image"
         />
         <h1 className="post-title">{post.title}</h1>
-        <p>{/* {post.date} */}</p>
+        <p className="post-date">{post.date}</p>
         <div className="post-body">
           <div
             dangerouslySetInnerHTML={{
@@ -56,6 +56,7 @@ export const pageQuery = graphql`
     }
     blogPost: datoCmsBlog(slug: { eq: $slug }) {
       id
+      date(formatString: "MMMM Do, YYYY")
       title
       bodyNode {
         childMarkdownRemark {
