@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ContactInfo from "../components/contactInfo"
 
+import { HelmetDatoCms } from "gatsby-source-datocms"
+
 class Contact extends Component {
   render() {
     const { data } = this.props
@@ -17,34 +19,12 @@ class Contact extends Component {
           title="Contact"
           keywords={[`Illustration`, `Painting`, `North Carolina`]}
         />
-
-        <form
-          name="contact"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          {/* You still need to add the hidden input with the form name to your JSX form */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>
-              Your Name: <input type="text" name="name" />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type="email" name="email" />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message: <textarea name="message"></textarea>
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+        <HelmetDatoCms>
+          <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+          />
+        </HelmetDatoCms>
         <ContactInfo />
       </Layout>
     )

@@ -5,9 +5,12 @@ import styled from "styled-components"
 export const StyledContactInfo = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 
   i {
     margin-right: 8px;
+  }
+
+  .hidden {
+    display: none;
   }
 `

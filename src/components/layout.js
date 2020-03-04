@@ -9,6 +9,7 @@ import Nav from "./nav"
 
 // Styles
 import { Wrapper, Header, Footer } from "../styles/Layout"
+// import "semantic-ui-css/semantic.min.css"
 
 const Layout = ({ location, children }) => {
   return (

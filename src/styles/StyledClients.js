@@ -18,12 +18,18 @@ export const StyledClients = styled.div`
       grid-template-columns: repeat(auto-fill, 25%);
     }
   }
+
   ul {
-    margin-left: 30px;
+    margin-left: 30;
     justify-content: left;
+    font-size: 16px;
 
     li {
-      /* list-style: none; */
+      list-style: none;
+
+      i {
+        margin-right: 5px;
+      }
     }
   }
 `
