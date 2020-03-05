@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
 
     {
       resolve: `gatsby-source-datocms`,
