@@ -15,16 +15,18 @@ const Bio = () => {
         const about = data.about
         return (
           <StyledBio>
-            <Img
-              fluid={about.image.fluid}
-              durationFadeIn={1000}
-              alt={about.name}
-            />
-            <h1 className="name">{about.name}</h1>
-            <h4 className="title">{about.title}</h4>
+            <h1>About Me</h1>
+            {/* <h1 className="name">{about.name}</h1>
+            <h4 className="title">{about.title}</h4> */}
             <div
               className="bio"
               dangerouslySetInnerHTML={{ __html: about.bio }}
+            />
+            <Img
+              className="bio-image"
+              fluid={about.image.fluid}
+              durationFadeIn={1000}
+              alt={about.name}
             />
           </StyledBio>
         )

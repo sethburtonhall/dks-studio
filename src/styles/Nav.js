@@ -1,7 +1,15 @@
 import styled from "styled-components"
 import { theme } from "./Theme"
+import { device } from "./MediaQueries"
 
-export const StyledNav = styled.div`
+import { getRandomColor } from "../utils/helpers"
+
+export const StyledMobileNav = styled.div`
+
+  @media ${device.laptop} {
+    display: none;
+  }
+
   .bm-burger-button {
     position: absolute;
     width: 36px;
@@ -16,10 +24,11 @@ export const StyledNav = styled.div`
 
   .bm-burger-bars {
     background: ${theme.black};
+    border-radius: 5px;
   }
 
   .bm-burger-bars-hover {
-    /* background: #a90000; */
+    background: ${theme.gray};
   }
 
   .bm-cross-button {
@@ -72,10 +81,26 @@ export const StyledNav = styled.div`
     display: inline-block;
     box-shadow: none;
     font-family: Montserrat; sans-serif;
-    font-size: 30px;
+    font-size: 25px;
   }
   
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+  }
+`
+
+export const StyledNav = styled.nav`
+  display: none;
+
+  @media ${device.laptop} {
+    display: block;
+  }
+
+  .menu-item {
+    margin-right: 10px;
+  }
+
+  .active {
+    border-bottom: 3px solid ${getRandomColor};
   }
 `

@@ -6,6 +6,7 @@ import { HelmetDatoCms } from "gatsby-source-datocms"
 
 // Components
 import Nav from "./nav"
+import MobileNav from "./MobileNav"
 
 // Styles
 import { Wrapper, Header, Footer } from "../styles/Layout"
@@ -25,7 +26,7 @@ const Layout = ({ location, children }) => {
                 crossorigin="anonymous"
               ></script>
             </HelmetDatoCms>
-            <Nav location={location.pathname} />
+            <MobileNav location={location.pathname} />
             <div className="app">
               <Header>
                 <h3 className="header">
@@ -36,19 +37,35 @@ const Layout = ({ location, children }) => {
                     />
                   </Link>
                 </h3>
+                <Nav location={location.pathname} />
               </Header>
               <main>{children}</main>
             </div>
 
             <Footer>
               <div className="social">
-                <a className="instagram" href={social.instagram} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="instagram"
+                  href={social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="fab fa-instagram"></i>
                 </a>
-                <a className="facebook" href={social.facebook} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="facebook"
+                  href={social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="fab fa-facebook"></i>
                 </a>
-                <a className="linkedin" href={social.linkedin} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="linkedin"
+                  href={social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="fab fa-linkedin"></i>
                 </a>
               </div>

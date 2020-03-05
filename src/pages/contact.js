@@ -6,8 +6,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ContactInfo from "../components/contactInfo"
 
-import { HelmetDatoCms } from "gatsby-source-datocms"
-
 class Contact extends Component {
   render() {
     const { data } = this.props
@@ -19,12 +17,6 @@ class Contact extends Component {
           title="Contact"
           keywords={[`Illustration`, `Painting`, `North Carolina`]}
         />
-        <HelmetDatoCms>
-          <link
-            rel="stylesheet"
-            href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
-          />
-        </HelmetDatoCms>
         <ContactInfo />
       </Layout>
     )

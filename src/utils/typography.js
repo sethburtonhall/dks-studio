@@ -16,17 +16,16 @@ Wordpress2016.overrideThemeStyles = () => {
       // lineHeight: `2em!important`,
     },
     "h1, h2, h3, h4, h5": {
-      fontFamily: `Merriweather, Georgia, serif!important`,
-      fontWeight: `900!important`,
+      marginTop: `0`,
     },
-    p: {
-      fontFamily: `Merriweather, Georgia, serif!important`,
-      lineHeight: `1.75!important`,
-    },
-    "label, .ui.button": {
-      fontFamily: `Merriweather, Georgia, serif!important`,
-      fontSize: `18px!important`,
-    },
+    // p: {
+    //   fontFamily: `Merriweather, Georgia, serif!important`,
+    //   lineHeight: `1.75!important`,
+    // },
+    // "label, .ui.button": {
+    //   fontFamily: `Merriweather, Georgia, serif!important`,
+    //   fontSize: `18px!important`,
+    // },
   }
 }
 

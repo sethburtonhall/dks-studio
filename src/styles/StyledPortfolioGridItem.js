@@ -2,6 +2,8 @@ import styled from "styled-components"
 import { device } from "./MediaQueries"
 import { theme } from "./Theme"
 
+import { getRandomColor } from "../utils/helpers"
+
 // import { rhythm, scale } from "../utils/typography"
 
 export const StyledPortfolioGridItem = styled.li`
@@ -49,8 +51,8 @@ export const StyledPortfolioGridItem = styled.li`
       height: 100%;
       width: 100%;
       opacity: 0;
-      transition: 0.5s ease;
-      background-color: rgba(0, 0, 0, 0.7);
+      transition: 0.3s ease;
+      background-color: ${getRandomColor};
     }
 
     &:hover .hover {

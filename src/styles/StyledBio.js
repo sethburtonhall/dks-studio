@@ -14,4 +14,9 @@ export const StyledBio = styled.div`
     margin-top: 0;
   }
 
+  .bio,
+  .bio-image {
+    margin-bottom: 50px;
+  }
+
 `

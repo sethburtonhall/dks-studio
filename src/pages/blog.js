@@ -22,19 +22,24 @@ const Blog = ({ data, location }) => {
         {posts.map(post => {
           const title = post.title || post.slug
           return (
-            <div key={post.id} className="post-card">
-              <Link to={`blog/${post.slug}`}>
-                <Img
-                  className="featured-image"
-                  fluid={post.image.fluid}
-                  durationFadeIn={1000}
-                  alt={`${post.title} Portfolio Cover`}
-                />
-                <div className="post-info">
-                  <h5 className="post-title">{title}</h5>
-                  <small className="post-date">{post.date}</small>
-                </div>
-              </Link>
+            <div className="border-wrap">
+              <div key={post.id} className="post-card">
+                <Link to={`blog/${post.slug}`}>
+                  <Img
+                    className="featured-image"
+                    fluid={post.image.fluid}
+                    durationFadeIn={1000}
+                    alt={`${post.title} Portfolio Cover`}
+                  />
+                  <div className="post-info">
+                    <div className="title-date">
+                      <h5 className="post-title">{title}</h5>
+                      <small className="post-date">{post.date}</small>
+                    </div>
+                    {/* <div className="post-category">category</div> */}
+                  </div>
+                </Link>
+              </div>
             </div>
           )
         })}
