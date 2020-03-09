@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 // Styles
-import { StyledPortfolioGridItem } from "../styles/StyledPortfolioGridItem"
+import { StyledPortfolioGridItem } from "../styles/StyledPortfolioGrid"
 
 const PortfolioGridItem = () => {
   return (
@@ -18,7 +18,7 @@ const PortfolioGridItem = () => {
           <>
             {portfolioItems.map(portfolioItem => (
               <StyledPortfolioGridItem key={portfolioItem.id}>
-                <div class=" overlay-image">
+                <div className="overlay-image">
                   <Link to={`/portfolio/${portfolioItem.slug}`}>
                     <Img
                       className="image"
@@ -26,8 +26,8 @@ const PortfolioGridItem = () => {
                       durationFadeIn={1000}
                       alt={`${portfolioItem.title} Portfolio Cover`}
                     />
-                    <div class=" hover">
-                      <div class=" text">{portfolioItem.title}</div>
+                    <div className="hover">
+                      <div className="title">{portfolioItem.title}</div>
                     </div>
                   </Link>
                 </div>

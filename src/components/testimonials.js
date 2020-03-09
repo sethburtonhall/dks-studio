@@ -15,11 +15,11 @@ const Testimonials = () => {
             {testimonials.map(testimonial => (
               <div className="testimonial" key={testimonial.id}>
                 <span className="icon left-icon">
-                  <i class="fas fa-quote-left"></i>
+                  <i className="fas fa-quote-left"></i>
                 </span>
                 <p className="quote">
                   <span className="icon right-icon">
-                    <i class="fas fa-quote-right"></i>
+                    <i className="fas fa-quote-right"></i>
                   </span>
                   {testimonial.quote}
                 </p>

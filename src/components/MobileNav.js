@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 import { slide as Menu } from "react-burger-menu"
 
 // Styles
-import { StyledMobileNav } from "../styles/Nav"
+import { StyledMobileNav } from "../styles/StyledNav"
 
 const Nav = ({ location }) => {
   // const rootPath = `${__PATH_PREFIX__}/`
@@ -24,16 +24,12 @@ const Nav = ({ location }) => {
   var styles = {
     bmMenuWrap: {
       transitionDuration: ".3s",
-    }
+    },
   }
 
   return (
     <StyledMobileNav>
-      <Menu
-        styles={styles}
-        right
-        noOverlay 
-        disableAutoFocus>
+      <Menu styles={styles} width={'250px'} right noOverlay disableAutoFocus>
         {/* {home} */}
         <Link id="home" to="/" className="menu-item">
           Home

@@ -7,6 +7,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   const blogTemplate = path.resolve(`./src/templates/blog-post.js`)
   const portfolioTemplate = path.resolve(`./src/templates/portfolio.js`)
+  const sketchbooksTemplate = path.resolve(`./src/templates/sketchbooks.js`)
+
   return graphql(
     `
       {
@@ -21,6 +23,14 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
         portfolios: allDatoCmsPortfolio(sort: { fields: [title], order: ASC }) {
+          edges {
+            node {
+              slug
+              title
+            }
+          }
+        }
+        sketchbooks: allDatoCmsSketchbook(sort: { fields: [title], order: ASC }) {
           edges {
             node {
               slug
@@ -64,6 +74,25 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: `portfolio/${post.node.slug}`,
         component: portfolioTemplate,
+        context: {
+          slug: post.node.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    // Create sketchbook page.
+    const sketchbook = result.data.sketchbooks.edges
+
+    sketchbook.forEach((post, index) => {
+      const previous =
+        index === sketchbook.length - 1 ? null : sketchbook[index + 1].node
+      const next = index === 0 ? null : sketchbook[index - 1].node
+
+      createPage({
+        path: `portfolio/sketchbooks/${post.node.slug}`,
+        component: sketchbooksTemplate,
         context: {
           slug: post.node.slug,
           previous,

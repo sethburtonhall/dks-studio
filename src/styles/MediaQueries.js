@@ -3,17 +3,18 @@ const size = {
   mobile: "480px",
   mobileL: "600px",
   tablet: "768px",
-  laptop: "992px"
-};
+  laptop: "992px",
+}
 
 export const device = {
   mobileS: `(min-width: ${size.mobileS}) and (max-width: ${size.mobile})`,
   mobile: `(min-width: ${size.mobile}) and (max-width: ${size.mobileL})`,
   mobileUp: `(min-width: ${size.mobile})`,
+  mobileLUp: `(min-width: ${size.mobileL})`,
   tablet: `(min-width: ${size.tablet}) and (max-width: ${size.laptop})`,
   tabletUp: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`
-};
+  laptop: `(min-width: ${size.laptop})`,
+}
 
 // /* Smartphones (landscape) ----------- */
 // @media only screen and (min-width : 321px) {

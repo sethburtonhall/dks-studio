@@ -50,7 +50,7 @@ const Layout = ({ location, children }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"></i>
                 </a>
                 <a
                   className="facebook"
@@ -58,7 +58,7 @@ const Layout = ({ location, children }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fab fa-facebook"></i>
+                  <i className="fab fa-facebook"></i>
                 </a>
                 <a
                   className="linkedin"
@@ -66,7 +66,7 @@ const Layout = ({ location, children }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fab fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </div>
               <span className="copyright">

@@ -5,31 +5,57 @@ import React from "react"
 import { Link } from "gatsby"
 
 // Styles
-import { StyledNav } from "../styles/Nav"
+import { StyledNav } from "../styles/StyledNav"
 
 const Nav = ({ location }) => {
-
   return (
     <StyledNav>
-      <Link id="home" activeClassName="active" to="/" className="menu-item">
+      <Link to="/" id="home" className="menu-item" activeClassName="active">
         Home
       </Link>
-      <Link id="about" activeClassName="active" to="/about" className="menu-item">
+      <Link
+        to="/about"
+        id="about"
+        className="menu-item"
+        activeClassName="active"
+      >
         About
       </Link>
-      <Link id="Portfolio" activeClassName="active" to="/portfolio" className="menu-item">
+      <Link
+        to="/portfolio"
+        id="Portfolio"
+        className="menu-item"
+        activeClassName="active"
+        partiallyActive={true}
+      >
         Portfolio
       </Link>
-      <Link id="clients" activeClassName="active" to="/clients" className="menu-item">
+      <Link
+        to="/clients"
+        id="clients"
+        className="menu-item"
+        activeClassName="active"
+      >
         Clients
       </Link>
-      <Link id="blog" activeClassName="active" to="/blog" className="menu-item">
+      <Link
+        to="/blog"
+        id="blog"
+        className="menu-item"
+        activeClassName="active"
+        partiallyActive={true}
+      >
         Blog
       </Link>
-      <Link id="contact" activeClassName="active" to="/contact" className="menu-item">
+      <Link
+        to="/contact"
+        id="contact"
+        className="menu-item"
+        activeClassName="active"
+      >
         Contact
       </Link>
-      <a id="store" href="https://www.google.com/" className="menu-item">
+      <a href="https://www.google.com/" id="store" className="menu-item">
         Store
       </a>
     </StyledNav>
