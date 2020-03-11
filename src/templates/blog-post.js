@@ -39,7 +39,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         </div>
         <hr />
       </StyledBlogPost>
-      <Pagination previous={previous} next={next} type="blog" />
+      <Pagination previous={next} next={previous} type="blog" />
     </Layout>
   )
 }

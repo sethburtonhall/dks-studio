@@ -13,7 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         blogs: allDatoCmsBlog(
-          sort: { fields: [meta___createdAt], order: DESC }
+          sort: { fields: date, order: DESC }
         ) {
           edges {
             node {

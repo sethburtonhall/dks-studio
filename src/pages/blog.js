@@ -57,7 +57,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    posts: allDatoCmsBlog(sort: { fields: [meta___createdAt], order: DESC }) {
+    posts: allDatoCmsBlog(sort: { fields: date, order: DESC }) {
       nodes {
         id
         date(formatString: "MMMM Do, YYYY")
