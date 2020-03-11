@@ -25,7 +25,8 @@ const Testimonials = () => {
                 </p>
                 <p className="citation">
                   <span className="name">{testimonial.name}</span> -{" "}
-                  {testimonial.title} - <span className="company">{testimonial.company}</span>
+                  {testimonial.title} -{" "}
+                  <span className="company">{testimonial.company}</span>
                 </p>
               </div>
             ))}

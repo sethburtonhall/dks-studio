@@ -16,8 +16,6 @@ const Bio = () => {
         return (
           <StyledBio>
             <h1>About Me</h1>
-            {/* <h1 className="name">{about.name}</h1>
-            <h4 className="title">{about.title}</h4> */}
             <div
               className="bio"
               dangerouslySetInnerHTML={{ __html: about.bio }}

@@ -10,17 +10,7 @@ import { slide as Menu } from "react-burger-menu"
 // Styles
 import { StyledMobileNav } from "../styles/StyledNav"
 
-const Nav = ({ location }) => {
-  // const rootPath = `${__PATH_PREFIX__}/`
-  // let home
-
-  // if (location !== rootPath) {
-  //   home = (
-  //     <Link id="home" to="/" className="menu-item">
-  //       Home
-  //     </Link>
-  //   )
-  // }
+const Nav = () => {
   var styles = {
     bmMenuWrap: {
       transitionDuration: ".3s",
@@ -29,8 +19,7 @@ const Nav = ({ location }) => {
 
   return (
     <StyledMobileNav>
-      <Menu styles={styles} width={'250px'} right noOverlay disableAutoFocus>
-        {/* {home} */}
+      <Menu styles={styles} width={"250px"} right noOverlay disableAutoFocus>
         <Link id="home" to="/" className="menu-item">
           Home
         </Link>

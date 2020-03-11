@@ -40,8 +40,8 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   }
-  console.log(location.pathname);
-  
+  console.log(location.pathname)
+
   const renderSlider = () => {
     if (location.pathname === "/portfolio/sketchbooks") {
       return (
@@ -115,42 +115,39 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
 }
 
 export const query = graphql`
-         query($slug: String!) {
-           site {
-             siteMetadata {
-               title
-               siteUrl
-             }
-           }
-           portfolioItem: datoCmsPortfolio(slug: { eq: $slug }) {
-             id
-             title
-             description
-             gallery: samples {
-               title
-               fluid {
-                 ...GatsbyDatoCmsFluid
-               }
-             }
-           }
-           sketchbookItems: allDatoCmsSketchbook(
-             sort: { fields: [title], order: ASC }
-           ) {
-             nodes {
-               id
-               slug
-               title
-               image: coverImage {
-                 fluid(
-                   maxWidth: 600
-                   imgixParams: { fm: "jpg", auto: "compress" }
-                 ) {
-                   ...GatsbyDatoCmsFluid
-                 }
-               }
-             }
-           }
-         }
-       `
+  query($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        siteUrl
+      }
+    }
+    portfolioItem: datoCmsPortfolio(slug: { eq: $slug }) {
+      id
+      title
+      description
+      gallery: samples {
+        title
+        fluid {
+          ...GatsbyDatoCmsFluid
+        }
+      }
+    }
+    sketchbookItems: allDatoCmsSketchbook(
+      sort: { fields: [title], order: ASC }
+    ) {
+      nodes {
+        id
+        slug
+        title
+        image: coverImage {
+          fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+            ...GatsbyDatoCmsFluid
+          }
+        }
+      }
+    }
+  }
+`
 
 export default PortfolioTemplate

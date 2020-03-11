@@ -10,22 +10,12 @@ Wordpress2016.overrideThemeStyles = () => {
     body: {
       color: `${theme.black}`,
       font: `100%/1.75 Merriweather, Georgia, serif!important`,
-      // fontFamily: `Merriweather, Georgia, serif!important`,
       fontSize: `18px!important`,
       textAlign: `justify`,
-      // lineHeight: `2em!important`,
     },
     "h1, h2, h3, h4, h5": {
       marginTop: `0`,
     },
-    // p: {
-    //   fontFamily: `Merriweather, Georgia, serif!important`,
-    //   lineHeight: `1.75!important`,
-    // },
-    // "label, .ui.button": {
-    //   fontFamily: `Merriweather, Georgia, serif!important`,
-    //   fontSize: `18px!important`,
-    // },
   }
 }
 

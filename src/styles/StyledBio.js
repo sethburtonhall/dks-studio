@@ -6,14 +6,6 @@ export const StyledBio = styled.div`
     border-radius: 5px;
   }
 
-  .name {
-    margin-bottom: 1rem;
-  }
-
-  .title {
-    margin-top: 0;
-  }
-
   .bio,
   .bio-image {
     margin-bottom: 50px;

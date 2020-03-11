@@ -14,9 +14,10 @@ export const StyledSlider = styled.div`
   .title {
     font-size: .75rem;
     text-align: center;
+    margin: 20px 0;
 
     @media ${device.laptop} {
-      margin: 0 0 100px 0;
+      margin: 20px 0 100px 0;
       font-size: 1rem;
     }
   }
@@ -40,7 +41,7 @@ export const StyledSlider = styled.div`
   }
 
   .slick-dots {
-    bottom: -70px;
+    bottom: -90px;
 
     @media ${device.laptop} {
       bottom: 20px;
