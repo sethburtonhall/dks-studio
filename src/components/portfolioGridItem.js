@@ -26,7 +26,7 @@ const PortfolioGridItem = () => {
                       durationFadeIn={1000}
                       alt={`${portfolioItem.title} Portfolio Cover`}
                     />
-                    <div className="hover" style={{backgroundColor: "#f16d2a"}}>
+                    <div className="hover" style={{backgroundColor: `${portfolioItem.hoverColor.hex}`}}>
                       <div className="title">{portfolioItem.title}</div>
                     </div>
                   </Link>
@@ -51,7 +51,9 @@ const portfolioCover = graphql`
             ...GatsbyDatoCmsFluid
           }
         }
-        hover_color
+        hoverColor {
+          hex
+        }
         title
       }
     }

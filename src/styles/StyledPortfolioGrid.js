@@ -54,7 +54,7 @@ export const StyledPortfolioGridItem = styled.li`
              left: 50%;
              width: 100%;
              padding: 0 10px;
-             color: ${theme.white};
+             color: ${theme.black};
              font-size: 30px;
              line-height: 1.5em;
              text-align: center;
