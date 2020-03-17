@@ -32,7 +32,7 @@ const Layout = ({ location, children }) => {
                 <h3 className="header">
                   <Link to={`/`}>
                     <img
-                      src="https://www.datocms-assets.com/23239/1582904975-dks-watermark.png"
+                      src="https://www.datocms-assets.com/23239/1584456718-logo.png"
                       alt=""
                     />
                   </Link>
