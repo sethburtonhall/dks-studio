@@ -106,7 +106,7 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
         />
       </HelmetDatoCms>
       <Pagination previous={next} next={previous} type="portfolio" />
-      <h1>{post.title}</h1>
+      <h1 style={{textAlign: 'center'}}>{post.title}</h1>
       <p>{post.description}</p>
       {renderSlider()}
     </Layout>
