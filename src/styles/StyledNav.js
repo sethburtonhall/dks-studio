@@ -99,52 +99,13 @@ export const StyledNav = styled.nav`
   a {
     position: relative;
 
-    &:before {
-      width: 0;
-      transition: width 0.1s ease-out;
-    }
-
-    &:hover:before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to top,
-        ${theme.link} 25%,
-        rgba(0, 0, 0, 0) 40%
-      );
-      position: absolute;
-      left: 0;
-      bottom: 2px;
-      z-index: -1;
-      will-change: width;
-      transform: rotate(-2deg);
-      transform-origin: left bottom;
-      /* transition: width 0.1s ease-out; */
-      transition-duration: .15s;
+    &:hover {
+      color: #f16d2a;
     }
 
     &.active {
     /* border-bottom: 3px solid ${getRandomColor}; */
-
-    &:before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to top,
-        ${theme.link} 25%,
-        rgba(0, 0, 0, 0) 40%
-      );
-      position: absolute;
-      left: 0;
-      bottom: 2px;
-      z-index: -1;
-      will-change: width;
-      transform: rotate(-2deg);
-      transform-origin: left bottom;
-      transition: width 0.1s ease-out;
-    }
+    color: #f16d2a;
   }
   }
 
