@@ -26,7 +26,7 @@ const PortfolioGridItem = () => {
                       durationFadeIn={1000}
                       alt={`${portfolioItem.title} Portfolio Cover`}
                     />
-                    <div className="hover">
+                    <div className="hover" style={{backgroundColor: "#f16d2a"}}>
                       <div className="title">{portfolioItem.title}</div>
                     </div>
                   </Link>
@@ -42,7 +42,7 @@ const PortfolioGridItem = () => {
 
 const portfolioCover = graphql`
   query PortfolioCover {
-    portfolioItems: allDatoCmsPortfolio(sort: { fields: [title], order: ASC }) {
+    portfolioItems: allDatoCmsPortfolio {
       nodes {
         id
         slug
@@ -51,6 +51,7 @@ const portfolioCover = graphql`
             ...GatsbyDatoCmsFluid
           }
         }
+        hover_color
         title
       }
     }

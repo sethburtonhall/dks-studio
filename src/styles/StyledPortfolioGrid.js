@@ -68,7 +68,7 @@ export const StyledPortfolioGridItem = styled.li`
              width: 100%;
              opacity: 0;
              transition: 0.3s ease;
-             background-color: ${getRandomColor};
+             /* background-color: ${getRandomColor}; */
            }
 
            &:hover .hover {
