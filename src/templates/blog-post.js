@@ -63,16 +63,8 @@ export const pageQuery = graphql`
           html
         }
       }
-      image: featuredImage {
-        fluid(
-          imgixParams: {
-            fm: "jpg"
-            auto: "compress"
-            w: "1500"
-            h: "500"
-            fit: "crop"
-          }
-        ) {
+      image: headerImage {
+        fluid {
           ...GatsbyDatoCmsFluid
         }
       }
