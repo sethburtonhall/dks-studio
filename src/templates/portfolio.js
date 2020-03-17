@@ -35,7 +35,7 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
     fadeIn: false,
     fade: true,
     autoplay: false,
-    variableWidth: true,
+    adaptiveHeight: true,
     pauseOnHover: true,
     slidesToShow: 1,
     slidesToScroll: 1,

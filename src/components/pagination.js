@@ -32,14 +32,14 @@ const Pagination = ({ previous, next, type }) => {
             rel="prev"
             className="previous"
           >
-            <i className="fas fa-arrow-alt-circle-left"></i>Previous
+            <i className="fas fa-arrow-alt-circle-left"></i>Previous Category
           </Link>
         )}
       </li>
       <li>
         {next && (
           <Link to={`/${type}/${next.slug}`} rel="next" className="next">
-            Next <i className="fas fa-arrow-alt-circle-right"></i>
+            Next Category <i className="fas fa-arrow-alt-circle-right"></i>
           </Link>
         )}
       </li>
