@@ -15,36 +15,40 @@ export const Wrapper = styled.div`
 `
 
 export const Header = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+         display: flex;
+         justify-content: space-between;
+         align-content: center;
 
-  .header {
-    margin-bottom: 0;
-    margin-top: 0;
+         .header {
+           margin-bottom: 0;
+           margin-top: 0;
 
-    @media ${device.mobileUp} {
-      grid-template-columns: repeat(auto-fill, 48%);
-      justify-content: space-between;
-      grid-gap: 1rem;
-      margin-bottom: 0;
-    }
+           @media ${device.mobileUp} {
+             grid-template-columns: repeat(auto-fill, 48%);
+             justify-content: space-between;
+             grid-gap: 1rem;
+             margin-bottom: 0;
+           }
 
-    img {
-      width: 180px;
-    }
-  }
+           img {
+             width: 200px;
 
-  a {
-    box-shadow: none;
-    text-decoration: none;
-    color: inherit;
-  }
+             @media ${device.tabletUp} {
+               width: 280px;
+             }
+           }
+         }
 
-  .logo {
-    width: 50%;
-  }
-`
+         a {
+           box-shadow: none;
+           text-decoration: none;
+           color: inherit;
+         }
+
+         .logo {
+           width: 50%;
+         }
+       `
 
 export const Footer = styled.footer`
   display: flex;
