@@ -68,7 +68,6 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
     } else {
       return (
         <div className="image-slider">
-          <p>View examples in the slide show below!</p>
           <StyledSlider>
             <Slider {...settings}>
               {portfolioGalleryImages.map((image, i) => (
