@@ -20,14 +20,14 @@ export const Header = styled.header`
   align-content: center;
 
   .header {
-    margin-bottom: 15px;
+    margin-bottom: 0;
     margin-top: 0;
 
     @media ${device.mobileUp} {
       grid-template-columns: repeat(auto-fill, 48%);
       justify-content: space-between;
       grid-gap: 1rem;
-      margin-bottom: ${rhythm(1.5)};
+      margin-bottom: 0;
     }
 
     img {
