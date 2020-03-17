@@ -22,9 +22,9 @@ const Blog = ({ data, location }) => {
         {posts.map(post => {
           const title = post.title || post.slug
           return (
-            <div className="border-wrap">
-              <div key={post.id} className="post-card">
-                <Link to={`blog/${post.slug}`}>
+            <div key={post.id} className="border-wrap">
+              <div className="post-card">
+                <Link to={`/blog/${post.slug}`}>
                   <Img
                     className="featured-image"
                     fluid={post.image.fluid}

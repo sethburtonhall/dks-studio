@@ -11,7 +11,7 @@ export const StyledPortfolioGrid = styled.ul`
   margin: 0;
 
   @media ${device.mobileUp} {
-    grid-template-columns: repeat(auto-fill, 48%);
+    grid-template-columns: repeat(auto-fill, 47%);
     justify-content: space-between;
     grid-gap: 1rem;
   }

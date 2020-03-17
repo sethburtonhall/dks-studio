@@ -3,9 +3,6 @@ import React from "react"
 // Gatsby
 import { StaticQuery, graphql } from "gatsby"
 
-// Helpers
-import { getRandomColor } from "../utils/helpers"
-
 // Styles
 import { StyledAwards } from "../styles/StyledAwards"
 

@@ -38,7 +38,13 @@ const Nav = () => {
         <Link id="contact" to="/contact" className="menu-item">
           Contact
         </Link>
-        <a id="store" href="https://www.google.com/" className="menu-item">
+        <a
+          id="store"
+          href="https://society6.com/davidkstanley"
+          className="menu-item"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Store
         </a>
       </Menu>

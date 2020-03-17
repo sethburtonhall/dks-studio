@@ -55,7 +55,13 @@ const Nav = ({ location }) => {
       >
         Contact
       </Link>
-      <a href="https://www.google.com/" id="store" className="menu-item">
+      <a
+        href="https://society6.com/davidkstanley"
+        id="store"
+        className="menu-item"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Store
       </a>
     </StyledNav>
