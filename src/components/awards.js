@@ -23,7 +23,6 @@ const Awards = () => {
                 <li key={award.id}>
                   <i
                     className="fas fa-star"
-                    style={{ color: getRandomColor() }}
                   ></i>
                   {award.name}
                 </li>

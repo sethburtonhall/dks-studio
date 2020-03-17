@@ -20,7 +20,6 @@ export const StyledClients = styled.div`
   }
 
   ul {
-    margin-left: 30;
     justify-content: left;
     font-size: 16px;
 

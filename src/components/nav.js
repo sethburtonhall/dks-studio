@@ -21,7 +21,7 @@ const Nav = ({ location }) => {
       >
         About
       </Link>
-      <Link
+      {/* <Link
         to="/portfolio"
         id="Portfolio"
         className="menu-item"
@@ -29,7 +29,7 @@ const Nav = ({ location }) => {
         partiallyActive={true}
       >
         Portfolio
-      </Link>
+      </Link> */}
       <Link
         to="/clients"
         id="clients"

@@ -1,15 +1,16 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import noriegaTheme from "typography-theme-noriega"
 import { theme } from "../styles/Theme"
+noriegaTheme.headerWeight = "900"
 
-Wordpress2016.overrideThemeStyles = () => {
+noriegaTheme.overrideThemeStyles = () => {
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
     body: {
       color: `${theme.black}`,
-      font: `100%/1.75 Merriweather, Georgia, serif!important`,
+      // font: `100%/1.75 Merriweather, Georgia, serif!important`,
       fontSize: `18px!important`,
       textAlign: `justify`,
     },
@@ -19,9 +20,9 @@ Wordpress2016.overrideThemeStyles = () => {
   }
 }
 
-delete Wordpress2016.googleFonts
+delete noriegaTheme.googleFonts
 
-const typography = new Typography(Wordpress2016)
+const typography = new Typography(noriegaTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

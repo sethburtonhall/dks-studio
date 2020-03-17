@@ -44,6 +44,7 @@ const Layout = ({ location, children }) => {
 
             <Footer>
               <div className="social">
+                <p className="prompt">Follow Me </p>
                 <a
                   className="instagram"
                   href={social.instagram}
@@ -72,7 +73,7 @@ const Layout = ({ location, children }) => {
               <span className="copyright">
                 <span className="symbol">©</span>
                 <span className="date">{new Date().getFullYear()}</span>
-                <span className="name">DKS</span>
+                <span className="name">David Stanley Illustration</span>
               </span>
             </Footer>
           </Wrapper>

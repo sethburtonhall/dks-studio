@@ -15,6 +15,11 @@ export const Wrapper = styled.div`
 
   .title {
     text-align: center;
+    text-transform: uppercase;
+  }
+
+  ul {
+    margin-left: 0;
   }
 `
 
@@ -55,54 +60,67 @@ export const Header = styled.header`
 `
 
 export const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
 
-  .social {
-    display: flex;
-    font-size: 30px;
+         @media ${device.tabletUp} {
+           flex-direction: row;
+         }
 
-    a {
-      box-shadow: none;
+         .social {
+           display: flex;
+           font-size: 30px;
 
-      &:hover {
-        &.instagram i {
-          color: rgb(219, 46, 123);
-        }
+           .prompt {
+             font-size: 18px;
+             position: relative;
+             top: 10px;
+             margin-right: 10px;
+             font-weight: bold;
+           }
 
-        &.facebook i {
-          color: rgb(66, 103, 178);
-        }
+           a {
+             box-shadow: none;
 
-        &.linkedin i {
-          color: rgb(0, 115, 178);
-        }
-      }
-    }
+             &:hover {
+               &.instagram i {
+                 color: rgb(219, 46, 123);
+               }
 
-    i {
-      margin-right: 10px;
-      color: ${theme.black};
-    }
-  }
+               &.facebook i {
+                 color: rgb(66, 103, 178);
+               }
 
-  .copyright {
-    .name {
-      margin-left: 6px;
-    }
+               &.linkedin i {
+                 color: rgb(0, 115, 178);
+               }
+             }
+           }
 
-    .symbol {
-      position: relative;
-      top: 3px;
-      margin-right: 1px;
-    }
+           i {
+             margin-right: 10px;
+             color: ${theme.black};
+           }
+         }
 
-    .date {
-      font-size: 17px;
-    }
-  }
+         .copyright {
+           .name {
+             margin-left: 6px;
+           }
 
-  text-align: center;
-  margin: 24px 0;
-`
+           .symbol {
+             position: relative;
+             top: 1px;
+             margin-right: 1px;
+           }
+
+           .date {
+             font-size: 17px;
+           }
+         }
+
+         text-align: center;
+         margin: 24px 0;
+       `
