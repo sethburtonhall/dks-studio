@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "./MediaQueries"
 
 export const StyledPagination = styled.ul`
   display: flex;
@@ -10,6 +11,11 @@ export const StyledPagination = styled.ul`
   li {
     a {
       box-shadow: none;
+      font-size: 14px;
+
+      @media ${device.tabletUp} {
+        font-size: 18px;
+      }
 
       &.previous i {
         margin-right: 5px;
