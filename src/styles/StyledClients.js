@@ -5,18 +5,18 @@ import { device } from "./MediaQueries"
 export const StyledClients = styled.div`
   .clients {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 100%);
+    grid-template-columns: repeat(auto-fill, 50%);
     text-align: left;
 
-    @media ${device.mobileUp} {
-      grid-template-columns: repeat(auto-fill, 31%);
+    @media ${device.tabletUp} {
+      grid-template-columns: repeat(auto-fill, 23%);
       justify-content: space-between;
       grid-gap: 1rem;
     }
 
-    @media ${device.laptop} {
+    /* @media ${device.laptop} {
       grid-template-columns: repeat(auto-fill, 25%);
-    }
+    } */
   }
 
   ul {
