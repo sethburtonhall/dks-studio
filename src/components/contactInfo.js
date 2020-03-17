@@ -13,7 +13,7 @@ const ContactInfo = () => {
         const { social } = data.site.siteMetadata
         return (
           <StyledContactInfo>
-            <h1>Contact</h1>
+            <h1 className="title">Contact</h1>
             <p className="contact-intro">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
               minima quisquam consequatur eaque modi quae qui enim labore

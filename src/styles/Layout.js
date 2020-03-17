@@ -12,43 +12,47 @@ export const Wrapper = styled.div`
   margin-right: auto;
   max-width: ${rhythm(34)};
   padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+
+  .title {
+    text-align: center;
+  }
 `
 
 export const Header = styled.header`
-         display: flex;
-         justify-content: space-between;
-         align-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 
-         .header {
-           margin-bottom: 0;
-           margin-top: 0;
+  .header {
+    margin-bottom: 0;
+    margin-top: 0;
 
-           @media ${device.mobileUp} {
-             grid-template-columns: repeat(auto-fill, 48%);
-             justify-content: space-between;
-             grid-gap: 1rem;
-             margin-bottom: 0;
-           }
+    @media ${device.mobileUp} {
+      grid-template-columns: repeat(auto-fill, 48%);
+      justify-content: space-between;
+      grid-gap: 1rem;
+      margin-bottom: 0;
+    }
 
-           img {
-             width: 200px;
+    img {
+      width: 200px;
 
-             @media ${device.tabletUp} {
-               width: 280px;
-             }
-           }
-         }
+      @media ${device.tabletUp} {
+        width: 280px;
+      }
+    }
+  }
 
-         a {
-           box-shadow: none;
-           text-decoration: none;
-           color: inherit;
-         }
+  a {
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
 
-         .logo {
-           width: 50%;
-         }
-       `
+  .logo {
+    width: 50%;
+  }
+`
 
 export const Footer = styled.footer`
   display: flex;
