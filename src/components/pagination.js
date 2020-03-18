@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import { StyledPagination } from "../styles/StyledPagination"
 
 const Pagination = ({ previous, next, type, location }) => {
-  console.log(location.pathname)
   return (
     <StyledPagination className="pagination">
       <li>
