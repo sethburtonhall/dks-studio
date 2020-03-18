@@ -39,6 +39,7 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
     pauseOnHover: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    accessibility: true,
   }
   console.log(location.pathname)
 
@@ -56,8 +57,15 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
                     durationFadeIn={1000}
                     alt={`${sketchbookItem.title} Portfolio Cover`}
                   />
-                  <div className="hover">
-                    <div className="title">{sketchbookItem.title}</div>
+                  <div
+                    className="hover"
+                    style={{
+                      backgroundColor: `${sketchbookItem.hoverColor.hex}`,
+                    }}
+                  >
+                    <div className="title" style={{ color: `white` }}>
+                      {sketchbookItem.title}
+                    </div>
                   </div>
                 </Link>
               </div>
@@ -143,6 +151,9 @@ export const query = graphql`
           fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
             ...GatsbyDatoCmsFluid
           }
+        }
+        hoverColor {
+          hex
         }
       }
     }

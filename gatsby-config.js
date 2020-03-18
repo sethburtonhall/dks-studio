@@ -56,5 +56,17 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `David K. Stanley Illustration`,
+        short_name: `DKS`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/dks-icon.jpg`, // This path is relative to the root of the site.
+      },
+    },
   ],
 }

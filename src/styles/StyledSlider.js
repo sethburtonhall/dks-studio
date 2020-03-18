@@ -3,12 +3,14 @@ import { theme } from "./Theme"
 import { device } from "./MediaQueries"
 
 export const StyledSlider = styled.div`
-  margin: 0 20px 100px;
+  margin: 0 auto 100px;
+  width: 80%;
+  max-width: 80%;
 
   @media ${device.laptop} {
     margin: 0 auto 20px;
-    width: 800px;
-    max-width: 800px;
+    width: 90%;
+    max-width: 90%;
   }
 
   .title {
@@ -24,6 +26,14 @@ export const StyledSlider = styled.div`
 
   /* Slick Slider */
 
+  .slick-prev {
+    left: -45px;
+  }
+
+  .slick-next {
+    right: -45px;
+  }
+
   .slick-prev,
   .slick-next {
     /* font-size: 20px;
@@ -32,12 +42,17 @@ export const StyledSlider = styled.div`
     &:hover {
       color: ${theme.black};
     } */
+
+    width: 40px;
+    height: 40px;
+    top: 42%;
   }
 
   .slick-prev:before,
   .slick-next:before {
     color: ${theme.black};
     /* content: none; */
+    font-size: 40px;
   }
 
   .slick-dots {
