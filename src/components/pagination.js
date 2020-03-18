@@ -3,9 +3,8 @@ import { Link } from "gatsby"
 
 import { StyledPagination } from "../styles/StyledPagination"
 
-const Pagination = ({ previous, next, type }) => {
-  const currentUrl = window.location.href;
-
+const Pagination = ({ previous, next, type, location }) => {
+  console.log(location.pathname)
   return (
     <StyledPagination className="pagination">
       <li>
@@ -16,19 +15,21 @@ const Pagination = ({ previous, next, type }) => {
             className="previous"
           >
             <i className="fas fa-arrow-alt-circle-left"></i>
-            {currentUrl.includes("blog") ? "Previous Post" : "Previous Category"}
+            {location.pathname.includes("blog")
+              ? "Previous Post"
+              : "Previous Category"}
           </Link>
         )}
       </li>
       <li>
         {next && (
           <Link to={`/${type}/${next.slug}`} rel="next" className="next">
-            {currentUrl.includes("blog") ? "Next Post" : "Next Category"}{" "}
+            {location.pathname.includes("blog") ? "Next Post" : "Next Category"}{" "}
             <i className="fas fa-arrow-alt-circle-right"></i>
           </Link>
         )}
       </li>
-    </StyledPagination>
+    </StyledPagination> 
   )
 }
 
