@@ -81,7 +81,7 @@ export const StyledMobileNav = styled.div`
     display: inline-block;
     box-shadow: none;
     font-family: Montserrat; sans-serif;
-    font-size: 25px;
+    font-size: 18px;
   }
   
   .bm-overlay {

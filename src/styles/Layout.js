@@ -6,22 +6,33 @@ import { theme } from "./Theme"
 import { rhythm } from "../utils/typography"
 
 export const Wrapper = styled.div`
-  position: relative;
-  min-height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: ${rhythm(34)};
-  padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+         position: relative;
+         min-height: 100vh;
+         margin-left: auto;
+         margin-right: auto;
+         max-width: ${rhythm(34)};
+         padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
 
-  .title {
-    text-align: center;
-    text-transform: uppercase;
-  }
+         .title {
+           text-align: center;
+           text-transform: uppercase;
+         }
 
-  ul {
-    margin-left: 0;
-  }
-`
+         ul {
+           margin-left: 0;
+         }
+
+         /* Responsive Font Hack - media queries are not supported in typography.js */
+         @media ${device.laptop} {
+           p:not(.prompt),
+           ul,
+           .bio,
+           nav a {
+             font-size: 112.5% !important;
+             text-align: justify;
+           }
+         }
+       `
 
 export const Header = styled.header`
   display: flex;
@@ -60,67 +71,67 @@ export const Header = styled.header`
 `
 
 export const Footer = styled.footer`
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-         @media ${device.tabletUp} {
-           flex-direction: row;
-         }
+  @media ${device.tabletUp} {
+    flex-direction: row;
+  }
 
-         .social {
-           display: flex;
-           font-size: 30px;
+  .social {
+    display: flex;
+    font-size: 30px;
 
-           .prompt {
-             font-size: 18px;
-             position: relative;
-             top: 10px;
-             margin-right: 10px;
-             font-weight: bold;
-           }
+    .prompt {
+      font-size: 18px;
+      position: relative;
+      top: 10px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
 
-           a {
-             box-shadow: none;
+    a {
+      box-shadow: none;
 
-             &:hover {
-               &.instagram i {
-                 color: rgb(219, 46, 123);
-               }
+      &:hover {
+        &.instagram i {
+          color: rgb(219, 46, 123);
+        }
 
-               &.facebook i {
-                 color: rgb(66, 103, 178);
-               }
+        &.facebook i {
+          color: rgb(66, 103, 178);
+        }
 
-               &.linkedin i {
-                 color: rgb(0, 115, 178);
-               }
-             }
-           }
+        &.linkedin i {
+          color: rgb(0, 115, 178);
+        }
+      }
+    }
 
-           i {
-             margin-right: 10px;
-             color: ${theme.black};
-           }
-         }
+    i {
+      margin-right: 10px;
+      color: ${theme.black};
+    }
+  }
 
-         .copyright {
-           .name {
-             margin-left: 6px;
-           }
+  .copyright {
+    .name {
+      margin-left: 6px;
+    }
 
-           .symbol {
-             position: relative;
-             top: 1px;
-             margin-right: 1px;
-           }
+    .symbol {
+      position: relative;
+      top: 1px;
+      margin-right: 1px;
+    }
 
-           .date {
-             font-size: 17px;
-           }
-         }
+    .date {
+      font-size: 17px;
+    }
+  }
 
-         text-align: center;
-         margin: 24px 0;
-       `
+  text-align: center;
+  margin: 24px 0;
+`

@@ -3,7 +3,7 @@ import { theme } from "./Theme"
 import { device } from "./MediaQueries"
 
 export const StyledSlider = styled.div`
-  margin: 0 auto 100px;
+  margin: 0 auto 150px;
   width: 80%;
   max-width: 80%;
 

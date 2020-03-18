@@ -11,8 +11,8 @@ noriegaTheme.overrideThemeStyles = () => {
     body: {
       color: `${theme.black}`,
       // font: `100%/1.75 Merriweather, Georgia, serif!important`,
-      fontSize: `18px!important`,
-      textAlign: `justify`,
+      fontSize: `16px!important`,
+      textAlign: `left`,
     },
     "h1, h2, h3, h4, h5": {
       marginTop: `0`,
