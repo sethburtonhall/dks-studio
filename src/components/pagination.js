@@ -45,6 +45,35 @@ const Pagination = ({ previous, next, type }) => {
       </li>
     </StyledPagination>
   )
+
+  //   if (location.pathname === "/portfolio/sketchbooks") {
+  //   return (
+  //     <StyledPagination className="pagination">
+  //       <li>
+  //         {previous && (
+  //           <Link
+  //             to={`/${type}/${previous.slug}`}
+  //             rel="prev"
+  //             className="previous"
+  //           >
+  //             <i className="fas fa-arrow-alt-circle-left"></i>Previous Category
+  //           </Link>
+  //         )}
+  //       </li>
+  //       <li>
+  //         {next && (
+  //           <Link to={`/${type}/${next.slug}`} rel="next" className="next">
+  //             Next Category <i className="fas fa-arrow-alt-circle-right"></i>
+  //           </Link>
+  //         )}
+  //       </li>
+  //     </StyledPagination>
+  //   )
+  // } else {
+  //   return (
+      
+  //   )
+  // }
 }
 
 export default Pagination

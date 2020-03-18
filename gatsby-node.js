@@ -12,25 +12,25 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        blogs: allDatoCmsBlog(
-          sort: { fields: date, order: DESC }
+        blogs: allDatoCmsBlog(sort: { fields: date, order: DESC }) {
+          edges {
+            node {
+              title
+              slug
+            }
+          }
+        }
+        portfolios: allDatoCmsPortfolio(sort: { fields: position }) {
+          edges {
+            node {
+              slug
+              title
+            }
+          }
+        }
+        sketchbooks: allDatoCmsSketchbook(
+          sort: { fields: [title], order: ASC }
         ) {
-          edges {
-            node {
-              title
-              slug
-            }
-          }
-        }
-        portfolios: allDatoCmsPortfolio(sort: { fields: [title], order: ASC }) {
-          edges {
-            node {
-              slug
-              title
-            }
-          }
-        }
-        sketchbooks: allDatoCmsSketchbook(sort: { fields: [title], order: ASC }) {
           edges {
             node {
               slug

@@ -42,7 +42,7 @@ const PortfolioGridItem = () => {
 
 const portfolioCover = graphql`
   query PortfolioCover {
-    portfolioItems: allDatoCmsPortfolio {
+    portfolioItems: allDatoCmsPortfolio(sort: { fields: position }) {
       nodes {
         id
         slug
