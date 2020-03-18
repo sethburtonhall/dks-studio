@@ -12,8 +12,8 @@ export const StyledMobileNav = styled.div`
 
   .bm-burger-button {
     position: absolute;
-    width: 36px;
-    height: 30px;
+    width: 29px;
+    height: 23px;
     right: 30px;
     top: 45px;
 
