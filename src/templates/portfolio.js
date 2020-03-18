@@ -113,7 +113,7 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </HelmetDatoCms>
-      <Pagination previous={next} next={previous} location={location} type="portfolio" />
+      <Pagination previous={next} next={previous} location={location.pathname} type="portfolio" />
       <h1 className="title">{post.title}</h1>
       <p>{post.description}</p>
       {renderSlider()}

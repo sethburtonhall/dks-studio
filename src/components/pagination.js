@@ -14,7 +14,7 @@ const Pagination = ({ previous, next, type, location }) => {
             className="previous"
           >
             <i className="fas fa-arrow-alt-circle-left"></i>
-            {location.pathname.includes("blog")
+            {location.includes("blog")
               ? "Previous Post"
               : "Previous Category"}
           </Link>
@@ -23,7 +23,7 @@ const Pagination = ({ previous, next, type, location }) => {
       <li>
         {next && (
           <Link to={`/${type}/${next.slug}`} rel="next" className="next">
-            {location.pathname.includes("blog") ? "Next Post" : "Next Category"}{" "}
+            {location.includes("blog") ? "Next Post" : "Next Category"}{" "}
             <i className="fas fa-arrow-alt-circle-right"></i>
           </Link>
         )}
