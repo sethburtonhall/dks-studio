@@ -71,7 +71,7 @@ const ContactInfo = () => {
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                action="/thanks"
+                action="/thanks/"
               >
                 <div className="field">
                   {/* REQUIRED for Gatsby */}
