@@ -3,7 +3,7 @@ module.exports = {
     title: `DKS Studio`,
     author: `David K. Stanley`,
     description: `Painting and Illustration`,
-    siteUrl: `https://dks-studio.netlify.com/`,
+    siteUrl: `https://davidkstanley.studio/`,
     social: {
       instagram: `https://www.instagram.com/davidkstanley.studio/`,
       facebook: `https://www.facebook.com/profile.php?id=100023120494669`,

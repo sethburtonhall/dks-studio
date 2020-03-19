@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import { StyledPagination } from "../styles/StyledPagination"
 
-const Pagination = ({ previous, next, type }) => {
+const Pagination = ({ previous, next, type, location }) => {
   
   return (
     <StyledPagination className="pagination">
@@ -14,14 +14,18 @@ const Pagination = ({ previous, next, type }) => {
             rel="prev"
             className="previous"
           >
-            <i className="fas fa-arrow-alt-circle-left"></i> Previous
+            <i className="fas fa-arrow-alt-circle-left"></i>
+            {location.pathname.includes("blog")
+              ? "Previous Post"
+              : "Previous Category"}
           </Link>
         )}
       </li>
       <li>
         {next && (
           <Link to={`/${type}/${next.slug}`} rel="next" className="next">
-            Next <i className="fas fa-arrow-alt-circle-right"></i>
+            {location.pathname.includes("blog") ? "Next Post" : "Next Category"}{" "}
+            <i className="fas fa-arrow-alt-circle-right"></i>
           </Link>
         )}
       </li>
