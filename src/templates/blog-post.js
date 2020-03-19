@@ -24,7 +24,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         <Pagination
           previous={next}
           next={previous}
-          type="portfolio"
+          type="blog"
           page="Post"
         />
       )
@@ -33,7 +33,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         <Pagination
           previous={next}
           next={previous}
-          type="portfolio"
+          type="blog"
           page="Category"
         />
       )
