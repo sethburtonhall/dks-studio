@@ -41,7 +41,6 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
     slidesToScroll: 1,
     accessibility: true,
   }
-  console.log(location.pathname)
 
   const renderSlider = () => {
     if (location.pathname === "/portfolio/sketchbooks") {
