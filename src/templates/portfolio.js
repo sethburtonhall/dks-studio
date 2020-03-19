@@ -96,6 +96,14 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
     }
   }
 
+  const renderPagination = () => {
+    if (location.pathname.includes("blog")) {
+      return <Pagination previous={next} next={previous} type="portfolio" page="Post"/>
+    } else {
+      return <Pagination previous={next} next={previous} type="portfolio" page="Category"/>
+    }
+  }
+
   return (
     <Layout location={location} title={site.siteTitle}>
       <SEO title={post.title} description={post.description || post.excerpt} />
@@ -112,7 +120,7 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </HelmetDatoCms>
-      <Pagination previous={next} next={previous} location={location} type="portfolio" />
+      {renderPagination()}
       <h1 className="title">{post.title}</h1>
       <p>{post.description}</p>
       {renderSlider()}

@@ -18,6 +18,28 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
+  const renderPagination = () => {
+    if (location.pathname.includes("blog")) {
+      return (
+        <Pagination
+          previous={next}
+          next={previous}
+          type="portfolio"
+          page="Post"
+        />
+      )
+    } else {
+      return (
+        <Pagination
+          previous={next}
+          next={previous}
+          type="portfolio"
+          page="Category"
+        />
+      )
+    }
+  }
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={post.title} />
@@ -39,7 +61,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         </div>
         <hr />
       </StyledBlogPost>
-      <Pagination previous={next} next={previous} location={location} type="blog" />
+      {renderPagination()}
     </Layout>
   )
 }
