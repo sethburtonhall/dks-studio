@@ -15,7 +15,7 @@ const Bio = () => {
         const about = data.about
         return (
           <StyledBio>
-            <h1 className="title">About Me</h1>
+            {/* <h1 className="title">About Me</h1> */}
             <div
               className="bio"
               dangerouslySetInnerHTML={{ __html: about.bio }}
