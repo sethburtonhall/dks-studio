@@ -61,8 +61,6 @@ const ContactInfo = () => {
                 </ul>
               </div>
 
-              <p>You can also contact me through this form.</p>
-
               <form
                 className="form"
                 name="Contact"
