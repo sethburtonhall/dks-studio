@@ -11,14 +11,12 @@ const ContactInfo = () => {
       query={contactQuery}
       render={data => {
         const { social } = data.site.siteMetadata
+        const contact = data.contact
         return (
           <StyledContactInfo>
             {/* <h1 className="title">Contact</h1> */}
             <p className="contact-intro">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
-              minima quisquam consequatur eaque modi quae qui enim labore
-              officia itaque neque dolorum deserunt est debitis, nobis
-              voluptate, ipsam, quia possimus!
+              {contact.intro}
             </p>
 
             <div className="contact-actions">
@@ -124,8 +122,7 @@ const contactQuery = graphql`
       }
     }
     contact: datoCmsContact {
-      email
-      phoneNumber
+      intro
     }
   }
 `
