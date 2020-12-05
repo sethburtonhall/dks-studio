@@ -52,11 +52,14 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </HelmetDatoCms>
-      <Pagination previous={next} next={previous} type="portfolio/sketchbooks" />
+      <Pagination
+        previous={next}
+        next={previous}
+        type="portfolio/sketchbooks"
+      />
       <h1>{post.title}</h1>
       <p>{post.description}</p>
       <div className="image-slider">
-        <p>View examples in the slide show below!</p>
         <StyledSlider>
           <Slider {...settings}>
             {sketchbookGalleryImages.map((image, i) => (
@@ -71,7 +74,7 @@ const PortfolioTemplate = ({ data, location, pageContext }) => {
                 <h4 className="title">{image.title}</h4>
               </div>
             ))}
-            </Slider>
+          </Slider>
         </StyledSlider>
       </div>
     </Layout>

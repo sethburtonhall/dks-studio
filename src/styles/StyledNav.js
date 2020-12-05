@@ -83,7 +83,7 @@ export const StyledMobileNav = styled.div`
     font-family: Montserrat; sans-serif;
     font-size: 18px;
   }
-  
+
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
@@ -104,9 +104,9 @@ export const StyledNav = styled.nav`
     }
 
     &.active {
-    /* border-bottom: 3px solid ${getRandomColor}; */
-    color: #f16d2a;
-  }
+      /* border-bottom: 3px solid ${getRandomColor}; */
+      color: #f16d2a;
+    }
   }
 
   .menu-item {
